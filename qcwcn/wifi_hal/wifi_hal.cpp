@@ -1638,10 +1638,10 @@ static int internal_valid_message_handler(nl_msg *msg, void *arg)
         subcmd = event.get_u32(NL80211_ATTR_VENDOR_SUBCMD);
         /* Restrict printing GSCAN_FULL_RESULT which is causing lot
            of logs in bug report */
-        if (subcmd != QCA_NL80211_VENDOR_SUBCMD_GSCAN_FULL_SCAN_RESULT) {
+        /*if (subcmd != QCA_NL80211_VENDOR_SUBCMD_GSCAN_FULL_SCAN_RESULT) {
             ALOGI("event received %s, vendor_id = 0x%0x, subcmd = 0x%0x",
                   event.get_cmdString(), vendor_id, subcmd);
-        }
+        }*/
     }
     else if((info->wifihal_ctrl_sock.s > 0) && (cmd == NL80211_CMD_FRAME))
     {
